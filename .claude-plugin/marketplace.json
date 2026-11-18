@@ -1,0 +1,12 @@
+{
+  "name": "crew-watch",
+  "owner": { "name": "FireTeam" },
+  "metadata": { "description": "crew-watch, a Claude Code mod that flags stuck subagents and background jobs." },
+  "plugins": [
+    {
+      "name": "crew-watch",
+      "source": "./",
+      "description": "Flags subagents and background jobs stuck repeating themselves, and wakes Claude to deal with it."
+    }
+  ]
+}

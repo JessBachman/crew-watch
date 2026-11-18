@@ -1,0 +1,21 @@
+{
+  "name": "crew-watch",
+  "version": "0.2.1",
+  "description": "Live panel of subagents and background jobs that flags anything stuck repeating itself, and wakes Claude to deal with it.",
+  "author": { "name": "FireTeam" },
+  "types": "./types/index.d.ts",
+  "userConfig": {
+    "stuckMinutes": {
+      "type": "number",
+      "title": "Minutes before a job or agent counts as stuck",
+      "description": "A background job with no new output, or a running subagent with no activity, for this long is flagged.",
+      "default": 20
+    },
+    "wakeClaude": {
+      "type": "boolean",
+      "title": "Wake Claude when a background job gets stuck",
+      "description": "Queues a prompt telling Claude to check the job, kill it if it is spinning, and change approach.",
+      "default": true
+    }
+  }
+}
